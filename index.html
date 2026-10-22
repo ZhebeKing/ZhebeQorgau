@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1220"><title>Qorgau / Қауіпсіздік басқару орталығы</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#dashboard"><span class="brand-mark">Q</span><span><b>QORGAU</b><small>ҚОРҒАНЫС ОРТАЛЫҒЫ</small></span></a>
+    <div class="org-chip"><span class="org-icon">Ұ</span><span><b>Ұлттық қызметтер агенттігі</b><small>ДЕМО ОРТА · № KZ-04</small></span><i class="dot"></i></div>
+    <div class="nav-label">БАСҚАРУ</div><nav id="nav">
+      <button class="nav-item active" data-view="dashboard"><span class="nav-ico">◫</span>Шолу <kbd>01</kbd></button>
+      <button class="nav-item" data-view="assets"><span class="nav-ico">▦</span>Активтер <kbd>02</kbd></button>
+      <button class="nav-item" data-view="threats"><span class="nav-ico">⌁</span>Қауіптер <kbd>03</kbd><span class="nav-count" id="threatCount">0</span></button>
+      <button class="nav-item" data-view="access"><span class="nav-ico">◈</span>Қолжетімділік <kbd>04</kbd></button>
+      <button class="nav-item" data-view="audit"><span class="nav-ico">≋</span>Аудит журналы <kbd>06</kbd></button>
+      <button class="nav-item" data-view="network"><span class="nav-ico">⌘</span>Желі архитектурасы <kbd>05</kbd></button>
+      <button class="nav-item" data-view="simulation"><span class="nav-ico">▷</span>Оқиға зертханасы <kbd>08</kbd></button>
+      <button class="nav-item" data-view="continuity"><span class="nav-ico">⟳</span>Үздіксіздік <kbd>06</kbd></button>
+      <button class="nav-item" data-view="reports"><span class="nav-ico">▤</span>Есептер және саясат <kbd>10</kbd></button>
+    </nav>
+    <div class="sidebar-bottom"><div class="live"><span class="pulse"></span>ДЕМО ҚОРҒАНЫСЫ БЕЛСЕНДІ</div><div class="mini-user"><span class="avatar">SA</span><span><b id="sideUser">Қауіпсіздік әкімшісі</b><small id="sideRole">SECURITY ADMIN</small></span><button id="logoutBtn" title="Сессияны аяқтау">↗</button></div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><button class="mobile-menu" id="menuBtn">☰</button><div class="breadcrumb"><span>QORGAU</span><b>/</b><strong id="crumb">Шолу</strong></div><div class="top-actions"><span class="env"><i class="dot"></i>ОҚУ СИМУЛЯЦИЯСЫ</span><button class="icon-btn" id="resetBtn" title="Демо деректерді бастапқы қалпына келтіру">↻</button><button class="user-switch" id="roleButton"><span class="avatar small">SA</span><span id="topUser">Қауіпсіздік әкімшісі</span><span>⌄</span></button></div></header>
+    <section id="view" class="view"></section>
+    <footer class="footnote"><span>QORGAU // ОҚУ ПРОТОТИПІ</span><span>Демонстрациялық деректер · Серверлік авторизация жоқ</span></footer>
+  </main>
+</div>
+<div id="toast" class="toast" role="status"></div><div id="modalRoot"></div>
+<script src="script.js"></script>
+</body></html>
